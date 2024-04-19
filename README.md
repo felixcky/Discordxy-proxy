@@ -85,10 +85,9 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 
 **返回结果**
 ```json
-//result则为taskId
 {
     "code": 0,
-    "result": "1211421713496994992",
+    "result": "1211421713496994992", //任务taskId
     "message": "Success"
 }
 ```
@@ -99,6 +98,10 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 
 `POST` /mj/submit/change
 
+| 参数      | 类型     | 说明  |
+| ------- | ------ | ----------- |
+| action    | string    | Action操作 U1、U2、U3、U4、R0、V1、V2、V3、V4 |
+
 ```json
 
 {"taskId":"1211421713496994992","action":"V4"}
@@ -106,11 +109,11 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 ```
 
 **返回结果**
+
 ```json
-//result则为taskId
 {
     "code": 0,
-    "result": "1211421713496994992",
+    "result": "1211421713496994992", //任务taskId
     "message": "Success"
 }
 ```
