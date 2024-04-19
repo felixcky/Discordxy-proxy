@@ -129,6 +129,7 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 
 **配置参数**
 | 参数      | 类型     | 说明  |
+| ------- | ------ | ----------- |
 | http.server    | string    | 服务IP|
 | http.port    | string    | 服务端口|
 | discord.proxy-server    | string    | 代理服务地址|
