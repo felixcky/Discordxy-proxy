@@ -143,11 +143,11 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 | discord.accounts[].enable    | bool    | 是否启用|
 | discord.accounts[].timeout-minutes    | int    | 超时时间（单位：分钟）|
 | discord.accounts[].action   | list    | 帐号功能列表|
-| discord.accounts[].action[].name   | list    | 功能名：mj、pika|
-| discord.accounts[].action[].guild-id   | list    | 服务器id|
-| discord.accounts[].action[].channel-id   | list    | 频道id|
-| discord.accounts[].action[].core-size   | list    | 并发任务数量|
-| discord.accounts[].action[].queue-size   | list    | 任务队列数量|
+| discord.accounts[].action[].name   | string    | 功能名：mj、pika|
+| discord.accounts[].action[].guild-id   | string    | 服务器id|
+| discord.accounts[].action[].channel-id   | string    | 频道id|
+| discord.accounts[].action[].core-size   | int    | 并发任务数量|
+| discord.accounts[].action[].queue-size   | int    | 任务队列数量|
 
 
 ## 通用接口
