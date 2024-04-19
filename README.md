@@ -16,4 +16,4 @@
 
 ## Didcord Token获取方式
 
-
+ <img src="https://github.com/felixcky/Discordxy-proxy/blob/master/user-token.jpg?raw=true" alt="user-token"/>
