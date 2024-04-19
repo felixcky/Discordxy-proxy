@@ -4,10 +4,10 @@
     "port": "9394"
   },
   "discord": {
-      "proxy-server": "",
-      "proxy-cdn": "",
-      "proxy-wss": "",
-      "upload-server": "",
+      "proxy-server": "https://discord.com",
+      "proxy-cdn": "https://cdn.discordapp.com",
+      "proxy-wss": "wss://gateway.discord.gg",
+      "upload-server": "https://discord-attachments-uploads-prd.storage.googleapis.com",
       "notify-pool-size": 10,
       "task-storage": "memory",
       "redis": {

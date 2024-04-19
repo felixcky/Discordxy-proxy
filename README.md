@@ -24,6 +24,9 @@ disxy.exe
 
 ```
 
+`默认配置访问地址为：http://127.0.0.1:9394`
+
+
 ## MidJourney主要功能
 - [x] 支持 Imagine 指令和相关动作(U1 U2 U3 U4 V1 V2 V3 V4 Reload重绘)
 - [x] 支持任务实时进度
@@ -57,6 +60,94 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 1134375328442224690表示：channel-id
 
 ```
+
+## Config.json
+
+```json
+
+{
+  "http": {
+    "server": "127.0.0.1",
+    "port": "9394"
+  },
+  "discord": {
+      "proxy-server": "https://discord.com",
+      "proxy-cdn": "https://cdn.discordapp.com",
+      "proxy-wss": "wss://gateway.discord.gg",
+      "upload-server": "https://discord-attachments-uploads-prd.storage.googleapis.com",
+      "notify-pool-size": 10,
+      "task-storage": "memory",
+      "redis": {
+        "host": "127.0.0.1",
+        "password": "123456",
+        "port": 6379,
+        "database": null
+      },
+      "accounts": [
+        {
+          "user-token": "",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.30 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.30",
+          "enable": true,
+          "timeout-minutes": 10,
+          "action":[
+            {
+              "name": "mj",
+              "guild-id": "",
+              "channel-id": "",
+              "core-size": 3,
+              "queue-size": 10
+            },
+            {
+              "name": "pika",
+              "guild-id": "",
+              "channel-id": "",
+              "core-size": 2,
+              "queue-size": 3
+            }
+          ]
+        },
+        {
+          "user-token": "",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+          "enable": false,
+          "timeout-minutes": 10,
+          "action":[
+            {
+              "name": "pika",
+              "guild-id": "",
+              "channel-id": "",
+              "core-size": 1,
+              "queue-size": 1
+            }
+          ]
+        }
+      ]
+  }
+}
+
+```
+
+**配置参数**
+| 参数      | 类型     | 说明  |
+| http.server    | string    | 服务IP|
+| http.port    | string    | 服务端口|
+| discord.proxy-server    | string    | 代理服务地址|
+| discord.proxy-cdn    | string    | 代理cdn地址|
+| discord.proxy-wss    | string    | 代理websocket地址|
+| discord.upload-server    | string    | 代理上传地址|
+| discord.task-storage    | string    | 储储方式：redis、memory|
+| discord.redis    | array    | redis配置|
+| discord.accounts    | list    | 帐号池列表|
+| discord.accounts[].user-token    | string    | 帐号token|
+| discord.accounts[].enable    | bool    | 是否启用|
+| discord.accounts[].timeout-minutes    | int    | 超时时间（单位：分钟）|
+| discord.accounts[].action   | list    | 帐号功能列表|
+| discord.accounts[].action[].name   | list    | 功能名：mj、pika|
+| discord.accounts[].action[].guild-id   | list    | 服务器id|
+| discord.accounts[].action[].channel-id   | list    | 频道id|
+| discord.accounts[].action[].core-size   | list    | 并发任务数量|
+| discord.accounts[].action[].queue-size   | list    | 任务队列数量|
+
 
 ## 通用接口
 
