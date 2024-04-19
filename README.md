@@ -58,14 +58,133 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 
 ```
 
+## 通用接口
+
+### 1.1 查询代理帐号在线
+
+`GET` /client/online
+
 
 ## MidJourney接口Api
 
+### 2.1 绘图
+
+`POST` /mj/submit/imagine
+
+**请求格式：Body json**
+
+```json
+
+//文本
+{"prompt":"a small cat"}
+
+//垫图加入url
+{"prompt":"http://www.xxx.com/1.jpg runing on the sky"}
+
+```
+
+**返回结果**
+```json
+//result则为taskId
+{
+    "code": 0,
+    "result": "1211421713496994992",
+    "message": "Success"
+}
+```
+
+### 2.2 选择与变化
+
+**请求格式：Body json**
+
+`POST` /mj/submit/change
+
+```json
+
+{"taskId":"1211421713496994992","action":"V4"}
+
+```
+
+**返回结果**
+```json
+//result则为taskId
+{
+    "code": 0,
+    "result": "1211421713496994992",
+    "message": "Success"
+}
+```
+
+### 2.3 任务进度
+
+`GET` /mj/submit/status?taskId=1160181713497101114
+
+**返回结果**
+
+| 参数      | 类型     | 说明  |
+| ------- | ------ | ----------- |
+| action    | string    | 任务功能 Imagine=绘画 Upsample=选择 Variation=变化 Reroll=重画 |
+| status    | string    | 任务状态 Submit=提交 Create=创建 Queuing=排队中 Running=运行中 Success=成功 Failed=创建失败 Timeout=任务超时|
+| progress    | string    | 进度 |
+
+
+```json
+
+{
+    "code": 0,
+    "result": {
+        "action": "Imagine",
+        "channelId": "xxxxxxxxxx",
+        "finalPrompt": "a small cat",
+        "finishTime": 1713497139,
+        "imageRawUrl": "https://cdn.discordapp.com/attachments/xxxx/xxx/xxx._a_small_cat_4e68485a-900c-4c1b-9222-f9b5ae4b3fcf.png?ex=66345934&is=6621e434&hm=f9948a08abccc78866b0ec2d52e3d0da7a74ade2ea609ccc4c8268b18bc8e98a&",
+        "imageUrl": "https://cdn.discordapp.com/attachments/xxx/xxx/cxxxx._a_small_cat_4e68485a-900c-4c1b-9222-f9b5ae4b3fcf.png?ex=66345934&is=6621e434&hm=f9948a08abccc78866b0ec2d52e3d0da7a74ade2ea609ccc4c8268b18bc8e98a&",
+        "messageHash": "4e68485a-900c-4c1b-9222-xxxxxxxxx",
+        "messageId": "1230720793068179496",
+        "nonce": "xxxxxxxxxx",
+        "progress": "100%",
+        "prompt": "a small cat",
+        "referenceMessageId": "xxxxxxxxxx",
+        "startTime": 1713497101,
+        "status": "Success",
+        "submitTime": 1713497101
+    },
+    "message": "Success"
+}
+
+{
+    "code": 0,
+    "result": {
+        "action": "Variation",
+        "channelId": "xxxxxxxx",
+        "finalPrompt": "a small cat - Variations (Strong)",
+        "finishTime": 1713497139,
+        "imageRawUrl": "https://cdn.discordapp.com/attachments/xxxx/xxx._a_small_cat_4e68485a-900c-4c1b-9222-f9b5ae4b3fcf.png?ex=66345934&is=6621e434&hm=f9948a08abccc78866b0ec2d52e3d0da7a74ade2ea609ccc4c8268b18bc8e98a&",
+        "imageUrl": "https://cdn.discordapp.com/attachments/xxx/xxx/xxx._a_small_cat_4e68485a-900c-4c1b-9222-f9b5ae4b3fcf.png?ex=66345934&is=6621e434&hm=f9948a08abccc78866b0ec2d52e3d0da7a74ade2ea609ccc4c8268b18bc8e98a&",
+        "messageHash": "4e68485a-900c-xxxx-9222-xxxxxxxxx",
+        "messageId": "xxxxxxxxxx",
+        "nonce": "xxxxxxxxx",
+        "params": {
+            "customId": "MJ::JOB::variation::4::3c833bd1-aaab-42f4-89c0-b55652ee5f11",
+            "index": "4",
+            "messageId": "xxxxxxxxxx"
+        },
+        "progress": "100%",
+        "prompt": "a small cat",
+        "referenceMessageId": "xxxxxxxxx",
+        "startTime": 1713497101,
+        "status": "Success",
+        "submitTime": 1713497101
+    },
+    "message": "Success"
+}
+
+```
 
 
 ## Pika接口Api
 
-### 1.1 Pika文生视频
+### 3.1 Pika文生视频
 
 `POST` /pika/create
 
@@ -82,7 +201,7 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 
 ```
 
-### 1.2 Pika图生视频
+### 3.2 Pika图生视频
 
 `POST` /pika/animate
 
@@ -94,7 +213,7 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 | prompt    | string    |提示词与句子（只能使用英文，不可使用中文，先用GPT翻译）  |
 
 
-### 1.3 获取视频任务状态
+### 3.3 获取视频任务状态
 
 `GET` /pika/status?nonce=XXX
 
