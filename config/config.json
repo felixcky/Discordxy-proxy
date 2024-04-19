@@ -1,0 +1,59 @@
+{
+  "http": {
+    "server": "127.0.0.1",
+    "port": "9394"
+  },
+  "discord": {
+      "proxy-server": "",
+      "proxy-cdn": "",
+      "proxy-wss": "",
+      "upload-server": "",
+      "notify-pool-size": 10,
+      "task-storage": "memory",
+      "redis": {
+        "host": "127.0.0.1",
+        "password": "123456",
+        "port": 6379,
+        "database": null
+      },
+      "accounts": [
+        {
+          "user-token": "",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.30 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.30",
+          "enable": true,
+          "timeout-minutes": 10,
+          "action":[
+            {
+              "name": "mj",
+              "guild-id": "",
+              "channel-id": "",
+              "core-size": 3,
+              "queue-size": 10
+            },
+            {
+              "name": "pika",
+              "guild-id": "",
+              "channel-id": "",
+              "core-size": 2,
+              "queue-size": 3
+            }
+          ]
+        },
+        {
+          "user-token": "",
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+          "enable": false,
+          "timeout-minutes": 10,
+          "action":[
+            {
+              "name": "pika",
+              "guild-id": "",
+              "channel-id": "",
+              "core-size": 1,
+              "queue-size": 1
+            }
+          ]
+        }
+      ]
+  }
+}
