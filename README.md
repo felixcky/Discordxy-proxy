@@ -161,7 +161,7 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 
 ### 2.1 绘图
 
-`POST` /mj/submit/imagine
+`POST` /mj/imagine
 
 **请求格式：Body json**
 
@@ -188,7 +188,7 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 
 **请求格式：Body json**
 
-`POST` /mj/submit/change
+`POST` /mj/change
 
 | 参数      | 类型     | 说明  |
 | ------- | ------ | ----------- |
@@ -212,7 +212,7 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 
 ### 2.3 任务进度
 
-`GET` /mj/submit/status?taskId=1160181713497101114
+`GET` /mj/status?taskId=1160181713497101114
 
 **返回结果**
 
