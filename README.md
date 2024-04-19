@@ -16,4 +16,6 @@
 
 ## Didcord Token获取方式
 
+登录Discord后，随便进入自己的频道或别人的，按浏览器F12打开开发者工具，搜索message，找到下图所示，复制token到配置文件
+
  <img src="https://github.com/felixcky/Discordxy-proxy/blob/master/user-token.jpg?raw=true" alt="user-token"/>
