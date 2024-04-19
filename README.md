@@ -4,6 +4,26 @@
 
 本程序以golang开发，高效协程队列代理程序，自动断线重连机制等，数据存储目前可使用内存与Redis存储，存储默认30天有效期，可在配置自行配置
 
+## 使用
+
+linux
+
+```shell
+
+chmod +x disxy
+
+./disxy
+
+```
+
+windows
+
+```shell
+
+disxy.exe
+
+```
+
 ## MidJourney主要功能
 - [x] 支持 Imagine 指令和相关动作(U1 U2 U3 U4 V1 V2 V3 V4 Reload重绘)
 - [x] 支持任务实时进度
