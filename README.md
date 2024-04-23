@@ -28,7 +28,7 @@ disxy.exe
 
 
 ## MidJourney主要功能
-- [x] 支持 Imagine 指令和相关动作(U1 U2 U3 U4 V1 V2 V3 V4 Reload重绘)
+- [x] 支持 Imagine 指令和相关动作(U1 U2 U3 U4 V1 V2 V3 V4 Reroll重绘)
 - [x] 支持任务实时进度
 - [x] 支持多账号配置，每个账号可设置对应的任务队列
 - [x] 其它功能陆续开发中
