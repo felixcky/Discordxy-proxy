@@ -192,7 +192,7 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 
 | 参数      | 类型     | 说明  |
 | ------- | ------ | ----------- |
-| action    | string    | Action操作 U1、U2、U3、U4、R0、V1、V2、V3、V4 |
+| action    | string    | Action操作 U1、U2、U3、U4、Reroll、V1、V2、V3、V4 |
 
 ```json
 
