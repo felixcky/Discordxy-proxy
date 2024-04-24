@@ -28,7 +28,7 @@ disxy.exe
 
 
 ## MidJourney主要功能
-- [x] 支持 Imagine 指令和相关动作(U1 U2 U3 U4 V1 V2 V3 V4 Reroll重绘)
+- [x] 支持 Imagine 指令和相关动作(一层指令：U1 U2 U3 U4 V1 V2 V3 V4 Reroll 二层指令：UpscaleSubtle UpscaleCreative VarySubtle VaryCreative Zoom2x Zoom1d5x PanLeft PanRight PanUp PanDown)
 - [x] 支持任务实时进度
 - [x] 支持多账号配置，每个账号可设置对应的任务队列
 - [x] 其它功能陆续开发中
@@ -192,7 +192,32 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 
 | 参数      | 类型     | 说明  |
 | ------- | ------ | ----------- |
-| action    | string    | Action操作 U1、U2、U3、U4、Reroll、V1、V2、V3、V4 |
+| taskId    | string    | 任务ID |
+| action    | string    | Action操作指令 |
+
+| 参数       | 说明  |
+| ------- | ----------- |
+| | 一层指令 |
+| U1    | 选择图1 |
+| U2    | 选择图2 |
+| U3    | 选择图3 |
+| U4    | 选择图4 |
+| V1    | 变换图1 |
+| V2    | 变换图2 |
+| V3    | 变换图3 |
+| V4    | 变换图4 |
+| Reroll    | 重绘 |
+| | 二层指令 |
+| UpscaleSubtle | 高清（微调） |
+| UpscaleCreative | 高清（创意） |
+| VarySubtle | 变换（微调） |
+| VaryCreative | 变换（创意） |
+| Zoom2x | 扩图2倍 |
+| Zoom1d5x | 扩图1.5倍 |
+| PanLeft | 向左扩图 |
+| PanRight | 向右扩图 |
+| PanUp | 向上扩图 |
+| PanDown | 向下扩图 |
 
 ```json
 
