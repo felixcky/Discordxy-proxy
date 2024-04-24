@@ -30,7 +30,7 @@ disxy.exe
 ## MidJourney主要功能
 - [x] 支持 Imagine 相关指令操作（选择、变换、重绘、微调、扩图等）
 - [x] 一层指令：U1 U2 U3 U4 V1 V2 V3 V4 Reroll
-- [x] 二层指令：UpscaleSubtle UpscaleCreative VarySubtle VaryCreative Zoom2x Zoom1d5x PanLeft PanRight PanUp PanDown
+- [x] 二层指令：UpscaleSubtle UpscaleCreative VarySubtle VaryCreative Zoom2x Zoom1d5x PanLeft PanRight PanUp PanDown （区域重绘和自定义扩图暂不支持）
 - [x] 支持任务实时进度
 - [x] 支持多账号配置，每个账号可设置对应的任务队列
 - [x] 其它功能陆续开发中
