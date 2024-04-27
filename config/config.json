@@ -10,6 +10,7 @@
       "upload-server": "https://discord-attachments-uploads-prd.storage.googleapis.com",
       "notify-pool-size": 10,
       "task-storage": "memory",
+      "task-storage-timeout": 30,
       "redis": {
         "host": "127.0.0.1",
         "password": "123456",
