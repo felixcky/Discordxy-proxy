@@ -65,6 +65,10 @@ https://discord.com/channels/1123665496148017235/1134375328442224690
 
 ```
 
+## 修复更新
+
+2024-05-09 修复MidJourney版本更新
+
 ## Config.json
 
 ```json
